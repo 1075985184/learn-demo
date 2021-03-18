@@ -29,8 +29,10 @@ public class TestController {
         int sn = baseInfo;
         for (int i = 1; i < 1000; i++) {
             sn++;
+            System.out.println("i======="+i+"sn========"+sn);
             int update = regionMapper.update(sn);
             if (update > 0) {
+                System.out.println(sn);
                 return "success";
             }
         }
