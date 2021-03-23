@@ -38,6 +38,16 @@ public class TestController {
         }
         return "error";
     }
+    @RequestMapping("test2")
+    private synchronized String test2(){
+        int baseInfo = regionMapper.findMax();
+        int update = regionMapper.update(baseInfo+1);
+          if (update>0){
+              return "success";
+          }
+        return "error";
+
+    }
+    }
 
 
-}
