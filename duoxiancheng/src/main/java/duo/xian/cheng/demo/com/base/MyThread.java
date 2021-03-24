@@ -32,6 +32,8 @@ public class MyThread extends Thread{
                 if (i==1){
                     int z=1/0;
                 }
+                Thread.sleep(1000);
+                    System.out.println("thread "+i+"-----2---------");
             }} catch (Exception e) {
                 success=true;
                 System.out.println("===========================================================================================================================================================");

@@ -2,6 +2,7 @@ package duo.xian.cheng.demo.com.leguansuo.mapper;
 
 
 import duo.xian.cheng.demo.com.leguansuo.vo.AbilitySeqTest;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -21,4 +22,7 @@ public interface RegionMapper {
 
     @Select("select region_id,region_name from region")
     List<AbilitySeqTest> findIdAndName();
+
+    @Insert("INSERT INTO `ability_seq_test`(`ability_name`, `seq_no`) VALUES (#{abilityName}, #{seqNo})")
+    void insert(AbilitySeqTest abilitySeqTest);
 }

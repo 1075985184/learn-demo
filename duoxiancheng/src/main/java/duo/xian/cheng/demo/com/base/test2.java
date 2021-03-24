@@ -11,19 +11,18 @@ public class test2 {
     public static void main(String[] args) {
 
 //
-//        MyThread myThread1 = new MyThread();
-//        myThread1.setI(1);
-//        myThread1.start();
-//        MyThread myThread2 = new MyThread();
-//        myThread2.setI(2);
-//        myThread2.start();
-//        MyThread myThread3 = new MyThread();
-//        myThread3.setI(3);
-//        myThread3.start();
+        MyThread myThread1 = new MyThread();
+        myThread1.setI(1);
+        myThread1.start();
+        MyThread myThread2 = new MyThread();
+        myThread2.setI(2);
+        myThread2.start();
+        MyThread myThread3 = new MyThread();
+        myThread3.setI(3);
+        myThread3.start();
         MyThread myThread4 = new MyThread();
         myThread4.setI(4);
         myThread4.start();
-        myThread4.interrupt();
 
 //       Thread thread= new Thread(()->{
 //           while (true){
