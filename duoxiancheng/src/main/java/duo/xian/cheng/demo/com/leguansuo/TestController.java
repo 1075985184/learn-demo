@@ -10,18 +10,24 @@ package duo.xian.cheng.demo.com.leguansuo;
 
 import duo.xian.cheng.demo.com.leguansuo.mapper.RegionMapper;
 import duo.xian.cheng.demo.com.leguansuo.vo.AbilitySeqTest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/leguansuo")
 public class TestController {
 
     @Autowired
     private RegionMapper regionMapper;
+
+    @Value("${number.status}")
+    private String[] status;
 
     @RequestMapping("test1")
     private String test(){
@@ -49,8 +55,21 @@ public class TestController {
 
     }
 
+    @RequestMapping("testArray")
+    private  String test3(){
+        for (String s : status) {
+            System.out.println(s);
+        }
+        return status.toString();
+    }
 
-
+    @RequestMapping("testlog")
+    private  String testLog(String code){
+        if (log.isDebugEnabled()) {
+            log.info("testLog: {}",code);
+        }
+        return code;
+    }
 
 
     }
