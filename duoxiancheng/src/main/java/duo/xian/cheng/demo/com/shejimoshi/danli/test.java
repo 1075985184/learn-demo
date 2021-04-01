@@ -8,6 +8,7 @@
 package duo.xian.cheng.demo.com.shejimoshi.danli;
 
 
+import duo.xian.cheng.demo.com.shejimoshi.danli.enumtest.EnumSinfleton;
 import duo.xian.cheng.demo.com.shejimoshi.danli.lazySingleton.LazyInnerClass;
 import duo.xian.cheng.demo.com.shejimoshi.danli.lazySingleton.LazySingleton;
 
@@ -32,8 +33,10 @@ public class test {
 
 
 
-        LazyInnerClass lazyInnerClass = new LazyInnerClass();
-        LazyInnerClass.lazy.test();
+//        LazyInnerClass lazyInnerClass = new LazyInnerClass();
+//        LazyInnerClass.lazy.test();
+
+        System.out.println( EnumSinfleton.getInstance());
     }
 
 
