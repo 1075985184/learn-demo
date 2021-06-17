@@ -2,14 +2,21 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://15.116.20.163:3306/osp_capability_operation_center?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=GMT%2b8
+    url: jdbc:mysql://15.116.20.163:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=GMT%2b8
     username: osp
     password: Osp_ctrm_2014
   redis:
     host: 127.0.0.1
     port: 6379
-
+  kafka:
+    bootstrap-servers: '15.116.20.117:9092,15.116.20.161:9092,15.116.20.24:9092'
 
 number:
   status: 301,302
+
+
+#  advance:
+#    - name: 'max.block.ms'
+#      value: 1000
+
 

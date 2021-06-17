@@ -7,6 +7,7 @@
  */
 package duo.xian.cheng.demo.com;
 
+import duo.xian.cheng.demo.com.redis.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -22,6 +23,9 @@ public class TestController2 {
     @Autowired
     private StringRedisTemplate template;
 
+    @Autowired
+    private RedisService redisService;
+
     @RequestMapping("/header")
     private String testRequestHeader(@RequestHeader("Accept-Encoding") String encoding){
         System.out.println(encoding);
@@ -35,5 +39,14 @@ public class TestController2 {
 //        System.out.println(test);
 
     }
-
+//    @RequestMapping("/kafka")
+//    private String testKafka(){
+//
+//    }
+@RequestMapping("/testRedis2")
+private String testRediswithRedisson(){
+    redisService.testString();
+    return "success";
+//        System.out.println(test);
+}
 }
