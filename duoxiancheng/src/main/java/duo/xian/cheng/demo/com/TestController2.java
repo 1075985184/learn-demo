@@ -26,6 +26,9 @@ public class TestController2 {
     @Autowired
     private RedisService redisService;
 
+    @Autowired
+    private TestAsyncService testAsync;
+
     @RequestMapping("/header")
     private String testRequestHeader(@RequestHeader("Accept-Encoding") String encoding){
         System.out.println(encoding);
@@ -49,4 +52,12 @@ private String testRediswithRedisson(){
     return "success";
 //        System.out.println(test);
 }
+
+    @RequestMapping("/test")
+    private String test123(){
+        redisService.testString();
+        return "success";
+//        System.out.println(test);
+    }
+
 }
