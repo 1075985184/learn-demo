@@ -20,14 +20,14 @@ import java.util.Properties;
 @RequestMapping("/test")
 public class TestController2 {
 
-    @Autowired
-    private StringRedisTemplate template;
+//    @Autowired
+//    private StringRedisTemplate template;
 
     @Autowired
     private RedisService redisService;
 
-    @Autowired
-    private TestAsyncService testAsync;
+//    @Autowired
+//    private TestAsyncService testAsync;
 
     @RequestMapping("/header")
     private String testRequestHeader(@RequestHeader("Accept-Encoding") String encoding){
@@ -35,13 +35,13 @@ public class TestController2 {
 //        System.out.println(test);
         return encoding;
     }
-    @RequestMapping("/testRedis")
-    private String testRedis(){
-        Properties info = template.getConnectionFactory().getConnection().info();
-        return info.getProperty("run_id");
+//    @RequestMapping("/testRedis")
+//    private String testRedis(){
+//        Properties info = template.getConnectionFactory().getConnection().info();
+//        return info.getProperty("run_id");
 //        System.out.println(test);
 
-    }
+//    }
 //    @RequestMapping("/kafka")
 //    private String testKafka(){
 //

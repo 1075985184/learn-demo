@@ -11,6 +11,7 @@ import duo.xian.cheng.demo.com.shejimoshi.Car;
 
 public class test {
 
+    //简单工厂就是通过一个工厂创建
     public static void main(String[] args) {
 
         Factor factor = new Factor();

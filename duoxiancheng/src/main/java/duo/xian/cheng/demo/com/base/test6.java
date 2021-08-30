@@ -20,9 +20,9 @@ public class test6 {
 //      String appkey="00601001002";
 //      System.out.println(appkey.substring(0,5));
 
-        HashMap<String, String> map = new HashMap<>();
-        map.put("1","1");
-        map.put("1","1");
+//        HashMap<String, String> map = new HashMap<>();
+//        map.put("1","1");
+//        map.put("1","1");
 //        map.put("1","1");
 //        map.put("1","1");
 //        String s="201";
@@ -30,6 +30,7 @@ public class test6 {
 //        String[] split = s.split(",");
 //        String[] split1 = s1.split(",");
 //        System.out.println();
-
+        String s="asdasdasda,asdasdasd,asdadasd,";
+        System.out.println(s.substring(0,s.length()-1));
     }
 }

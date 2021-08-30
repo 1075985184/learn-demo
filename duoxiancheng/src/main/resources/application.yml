@@ -6,8 +6,12 @@ spring:
     username: osp
     password: Osp_ctrm_2014
   redis:
-    host: 127.0.0.1
-    port: 6379
+    sentinel:
+      master: test
+      nodes: 15.116.20.124:26379
+    password: OspRedisSentinel2017
+    timeout: 3000
+
   kafka:
     bootstrap-servers: '15.116.20.117:9092,15.116.20.161:9092,15.116.20.24:9092'
 

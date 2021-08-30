@@ -17,7 +17,7 @@ public class test {
         FactoryCreate baomaFactory = new BaomaFactor();
         Car benchi = benchiFactory.create();
         benchi.run();
-        Car benci = baomaFactory.create();
-        benci.run();
+        Car baoma = baomaFactory.create();
+        baoma.run();
     }
 }
